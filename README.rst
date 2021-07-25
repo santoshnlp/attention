@@ -25,21 +25,25 @@ In this project LSTM cell is used in encoder and decoder.   Here I will briefly 
 ========================
 Inputs to a LSTM cell
 ========================
+
 LSTM cell expects three inputs:
      1. Cell state
      2. Hidden state
      3. Input
      
      Cell state and Hidden state are of same dimensions.  The Input dimension depends on the embedding vector.  
+     
 ========================
 Outputs from a LSTM cell
 ========================
+
 LSTM cell provides three outputs:
      1. Cell state
      2. Hidden state
      3. Output
      
      Output is of same dimension as Hidden state.
+     
 ***************
 Encoder
 ***************
@@ -47,6 +51,9 @@ Encoder
 ***************
 Attention mechanism
 ***************
+
+.. image:: https://github.com/santoshnlp/attention/blob/main/Attention.png
+
 ***************
 Decoder
 ***************
