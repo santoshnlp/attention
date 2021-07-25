@@ -172,3 +172,12 @@ The output of this linear layer becomes input to LSTM cell.
 Decoder
 ***************
 
+=================
+STEP-1
+=================
+
+Here last outputs of decoder outputs  i.e. cell state and hidden state are given as input to decoder.
+Starting word is used as SOS token of output language. The word embedding and encoder states are used in attention mechanism as described in attention section.  The output of attention mechanism is used as input to the decoder.
+
+.. image:: https://github.com/santoshnlp/attention/blob/main/Decoder-time-step-0.png
+
