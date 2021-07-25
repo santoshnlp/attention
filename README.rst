@@ -5,12 +5,7 @@ Table of Contents
   :local:
   :depth: 4
 
-***************
-Data Preparation
-***************
-.. image:: https://github.com/santoshnlp/attention/blob/main/LSTM-Input.png
-      :target: https://twitter.com/amirsinatorfi
-      
+
 ***************
 Embedding Layer
 ***************
@@ -60,6 +55,17 @@ The LSTM cells gives 3 outputs. Cell state and hidden state are used by LSTM in 
 
 .. image:: https://github.com/santoshnlp/attention/blob/main/Encoder-Time-Step-0.png
 
+
+=================
+STEP-2
+=================
+
+Now the cell state and hidden stae are taken from previous time step. The index of second word of sentence is
+passed to embedding layer to get the embedding vector. This embedding vector is used as input to LSTM.
+
+The LSTM cells gives 3 outputs. Cell state and hidden state are used by LSTM in next time step.  The output is saved to a list (tensor) . 
+
+.. image:: https://github.com/santoshnlp/attention/blob/main/Encode-time-step-1.png
 
 
 ***************
