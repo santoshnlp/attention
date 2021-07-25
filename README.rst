@@ -54,6 +54,53 @@ Attention mechanism
 
 .. image:: https://github.com/santoshnlp/attention/blob/main/Attention.png
 
+=================
+STEP-1
+=================
+
+In the decoder part the input word embedding (output language) is obtained.  In the first time step it is SOS_token.  In the subsequent time steps it is same as the the word predicted in previous time step. 
+
+
+=================
+STEP-2
+=================
+
+The input word embedding (output language) is concatenated with decoder hidden state. 
+At the beginning the input word to decoder is SOS token and the hidden state is the last hidden state obtained through encoder.
+
+
+
+=================
+STEP-3
+=================
+
+The concated vector in STEP-2 is passed through a FC layer.
+
+--------------------
+Input layer size
+--------------------
+
+Clearly the input layer size = Word embedding size + Decoder hidden size.
+
+In our case both are 256. Therefore input layer size = 256+256 = 512.
+
+--------------------
+Output layer size
+--------------------
+
+The purpose of this layer is to tell on which word or encoder outputs more weightage should be given.
+
+The number of encoder outputs for a given input sentence depends on number of tokens in the input sentence.
+
+We have already seen that the maximum number of words for a given sentence in input language is equal to 10.
+
+So the output layer size should be 10. This way all the sentences will be handled.
+
+
+
+
+
+
 ***************
 Decoder
 ***************
