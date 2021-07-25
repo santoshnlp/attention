@@ -48,6 +48,20 @@ LSTM cell provides three outputs:
 Encoder
 ***************
 
+
+=================
+STEP-1
+=================
+
+As discussed in LSTM section, the cell state and hidden stae are intialized with zeros. The index of first word of sentence is
+passed to embedding layer to get the embedding vector. This embedding vector is used as input to LSTM.
+
+The LSTM cells gives 3 outputs. Cell state and hidden state are used by LSTM in next time step.  The output is saved to a list (tensor) . 
+
+.. image:: https://github.com/santoshnlp/attention/blob/main/Encoder-Time-Step-0.png
+
+
+
 ***************
 Attention mechanism
 ***************
