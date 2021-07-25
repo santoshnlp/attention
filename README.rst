@@ -97,8 +97,33 @@ We have already seen that the maximum number of words for a given sentence in in
 So the output layer size should be 10. This way all the sentences will be handled.
 
 
+This is the sample output of attention vector.
+
+.. code-block:: python
+
+ tensor([[ 0.6701,  0.5469, -0.0666, -0.2150, -0.2235,  0.6324,  0.0358, -0.2763,
+          0.0725,  0.3550]], grad_fn=<AddmmBackward>)
+          
+
+=================
+STEP-4
+=================
+
+Apply softmax to the output of Step-3
+
+sample output
+
+.. code-block:: python
+
+ tensor([[0.1576, 0.1393, 0.0754, 0.0650, 0.0645, 0.1518, 0.0836, 0.0612, 0.0867,
+         0.1150]], grad_fn=<SoftmaxBackward>)
 
 
+=====================
+STEP-5
+=====================
+
+Now we have the attention weights. These weights are basically telling how much focus we should lay on each of the the encoded vector ( There are 10 encoded vectors ). Lets use attention weights and encoded vectors to extract focus state.
 
 
 ***************
