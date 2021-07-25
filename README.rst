@@ -125,6 +125,28 @@ STEP-5
 
 Now we have the attention weights. These weights are basically telling how much focus we should lay on each of the the encoded vector ( There are 10 encoded vectors ). Lets use attention weights and encoded vectors to extract focus state.
 
+====================
+STEP-6
+====================
+
+From STEP-5 we got a vector rich in context. This vector carries the context information as it has components of relevant words. Now lets concatenate this vector to word embedding.
+
+
+====================
+STEP-7
+====================
+
+The vector obtained in STEP-6 has 256*2 dimension. We need to convert to 256.
+
+This could be achieved through a FC network.
+
+.. code-block:: python
+
+  input_to_lstm_layer = nn.Linear(256 * 2, 256).to(device)
+  
+  
+The output of this linear layer becomes input to LSTM cell.
+
 
 ***************
 Decoder
