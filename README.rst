@@ -6,9 +6,6 @@ Table of Contents
   :depth: 4
 
 
-***************
-Embedding Layer
-***************
 
 ***************
 LSTM cell
